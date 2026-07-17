@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0
+     https://www.apache.org/licenses/LICENSE-2.0 -->
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -175,7 +178,7 @@ delegation rules).
 
 A lot of the repetitive work on this team has been automated into
 agent skills that live under
-[`.claude/skills/`](../../skills/). They are plain `SKILL.md`
+[`.agents/skills/`](../../skills/). They are plain `SKILL.md`
 files with YAML frontmatter, so Claude Code picks them up
 automatically and other agents that follow the emerging skill
 convention can use them too.
