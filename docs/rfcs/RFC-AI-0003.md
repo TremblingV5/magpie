@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0
+     https://www.apache.org/licenses/LICENSE-2.0 -->
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -62,7 +65,7 @@ apache/magpie maintainers
 | **Targets** | `apache/magpie` (the Apache Magpie framework) + adopting projects |
 | **Implemented in** | [PR #48](https://github.com/apache/magpie/pull/48) (foundation), [PR #50](https://github.com/apache/magpie/pull/50) (refinement + skill-side redactor wiring), [PR #51](https://github.com/apache/magpie/pull/51) (gate-check + skill-side gate wiring) |
 | **Source-of-truth docs** | [`tools/privacy-llm/{tool,pii,models,wiring}.md`](https://github.com/apache/magpie/tree/main/tools/privacy-llm), [`docs/setup/privacy-llm.md`](https://github.com/apache/magpie/blob/main/docs/setup/privacy-llm.md), [`AGENTS.md → Privacy-LLM`](https://github.com/apache/magpie/blob/main/AGENTS.md) |
-| **Reference implementation** | [`tools/privacy-llm/redactor/`](https://github.com/apache/magpie/tree/main/tools/privacy-llm/redactor) (PII redactor, stdlib-only Python, 48 unit tests), [`tools/privacy-llm/checker/`](https://github.com/apache/magpie/tree/main/tools/privacy-llm/checker) (approved-LLM gate-check, stdlib-only Python, 33 unit tests) |
+| **Reference implementation** | [`tools/privacy-llm/redactor/`](https://github.com/apache/magpie/tree/main/tools/privacy-llm/redactor) (PII redactor, stdlib-only Python, 53 unit tests), [`tools/privacy-llm/checker/`](https://github.com/apache/magpie/tree/main/tools/privacy-llm/checker) (approved-LLM gate-check, stdlib-only Python, 33 unit tests) |
 
 ## 1. Abstract
 
@@ -319,7 +322,7 @@ uv run --project <framework>/tools/privacy-llm/redactor pii-list
 
 `<framework>` is the standard placeholder convention — substitutes to the snapshot path inside an adopter, or to `.` standalone. The redactor reads no config file: it just does what the caller passes via `--field`. Per-project knobs are applied by the calling skill (see §7).
 
-The implementation is **stdlib-only** by design — `argparse`, `hashlib`, `json`, `pathlib`, `tempfile`, `os`. No third-party runtime dependencies. The dev group adds `pytest`, `ruff`, `mypy` for lint and test. Test count: **48 unit tests**, all passing.
+The implementation is **stdlib-only** by design — `argparse`, `hashlib`, `json`, `pathlib`, `tempfile`, `os`. No third-party runtime dependencies. The dev group adds `pytest`, `ruff`, `mypy` for lint and test. Tests all passing.
 
 ### 6.2 The checker sub-tool — `tools/privacy-llm/checker/` (PR #51)
 
